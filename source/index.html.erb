@@ -1,10 +1,92 @@
----
-title: Le Wagon Middleman boilerplate
----
+<!-- title -->
+<div class="title-page">
+<%# link_to "#intro" do %>
+  <%#= image_tag "starwars.png", class: "sw-logo" %>
+<%# end %>
 
-<div class="welcome text-center padded">
-  <h1>Welcome to Middleman</h1>
-  <p class="doc">
-    <%= link_to "Read Online Documentation", "http://middlemanapp.com/" %>
-  </p>
+<div class="foo"> Foo </div>
+<div class="bar"> Bar </div>
+
+</div>
+
+<!-- intro -->
+<div class="intro-page" id="intro">
+  <h1>Intro</h1>
+
+  <p>Which side to you belong to?</p>
+  <p>Come in found out.</p>
+
+  <% link_to "#choice" do %>
+    <p>Start</p>
+  <% end %>
+</div>
+
+<!-- choice -->
+<div class="choice-page" id="choice">
+<!-- choice good -->
+  <div class="good-side">
+    <div class="choice-header">
+      <h2>Light Side</h2>
+      <% link_to "#good" do %>
+        <p>Choice white force</p>
+      <% end %>
+    </div>
+  </div>
+<!-- choice bad -->
+  <div class="bad-side">
+    <div class="choice-header">
+      <h2>Bad</h2>
+      <% link_to "#bad" do %>
+        <p>Choice red force</p>
+      <% end %>
+    </div>
+  </div>
+<!-- return button -->
+  <div class="choice-footer">
+    <% link_to "#intro" do %>
+      <p>Intro</p>
+    <% end %>
+  </div>
+</div>
+
+<!-- info good -->
+<div class="info-page" id="good">
+  <div class="info-header">
+    <h2>The light Side</h2>
+    <p>Characters</p>
+  </div>
+
+  <div class="foo"> Foo </div>
+  <div class="bar"> Bar </div>
+
+<!-- characters -->
+  <div class="info-content">
+  </div>
+
+  <div class="info-footer">
+    <% link_to "#choice" do %>
+      <p>Choice a new side</p>
+    <% end %>
+  </div>
+</div>
+
+<!-- info bad -->
+<div class="info-page" id="bad">
+  <div class="info-header">
+    <h2>The Dark Side</h2>
+    <p>Characters</p>
+  </div>
+
+<!-- info characters -->
+  <div class="info-content">
+<!-- render partial -->
+  <%#= partial "layouts/loop.erb" %>
+  </div>
+
+
+  <div class="info-footer">
+    <% link_to "#choice" do %>
+      <p>Choice a new side</p>
+    <% end %>
+  </div>
 </div>

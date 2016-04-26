@@ -1,0 +1,18 @@
+<% data.good.friends.each do |f| %>
+  <div id="btnCharacter" class="btn btn-default">
+    <%= f %>
+  </div>
+<% end %>
+
+<div id="overlay"></div>
+
+<% data.good.friends.each do |f| %>
+  <div id="popup">
+    <div class="popup-info">
+      <%= f %>
+    </div>
+    <div id="CloseBtn" class="btn btn-danger">
+      Close
+    </div>
+  </div>
+<% end %>

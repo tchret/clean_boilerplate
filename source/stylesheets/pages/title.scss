@@ -1,0 +1,29 @@
+.title-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sw-logo {
+  height: 200px;
+  opacity: 0;
+
+  animation: zoomLogo 4s 1s ease forwards;
+}
+
+@keyframes zoomLogo {
+  0%{
+    opacity: 0;
+  }
+
+  100%{
+    opacity: 1;
+  }
+}
+
+.intro-text {
+  height: 100px;
+  width: 100px;
+  background-color: white;
+}
